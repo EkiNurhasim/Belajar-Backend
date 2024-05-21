@@ -1,0 +1,119 @@
+### REGISTER
+POST http://localhost:8080/api/users HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username": "Eki Asari",
+    "password": "rahasia",
+    "name": "Eki Nurhasim"
+}
+
+### LOGIN
+POST http://localhost:8080/api/auth/login HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username": "Eki Asari",
+    "password": "rahasia"
+}
+
+### GET USER
+GET http://localhost:8080/api/users/current HTTP/1.1
+Accept: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0
+
+
+### GET USER
+PATCH  http://localhost:8080/api/users/current HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0
+
+{
+    "name": "Eki Nurhasim Al Asari"
+}
+
+
+### CREATE CONTACT
+POST http://localhost:8080/api/contacts HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0
+
+{
+    "firstName": "Orange",
+    "lastName": "Blue",
+    "email": "Orange@gmail.com",
+    "phone": "3123"
+}
+
+### SEARCH CONTACT
+GET http://localhost:8080/api/contacts HTTP/1.1
+Accept: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0
+
+### GET CONTACT
+GET http://localhost:8080/api/contacts/96afd6bc-b052-401a-a731-52ab55f1fdaf HTTP/1.1
+Accept: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0
+
+### GET CONTACT
+PUT http://localhost:8080/api/contacts/96afd6bc-b052-401a-a731-52ab55f1fdaf HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0
+
+{
+    "firstName": "Mamat",
+    "lastName": "Akbar",
+    "email": "mamat@gmail.com",
+    "phone": "mamat"
+
+}
+
+### GET CONTACT
+DELETE  http://localhost:8080/api/contacts/96afd6bc-b052-401a-a731-52ab55f1fdaf HTTP/1.1
+Accept: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0
+
+### ADD ADDRESS
+POST http://localhost:8080/api/contacts/56991597-d37f-43f3-a333-349789ffc4e8/addresses HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0
+
+{
+    "street": "Jalan",
+    "city": "Serang",
+    "province": "Banten",
+    "country": "Indonesia",
+    "postalCode": "12412"
+
+}
+
+### LIST ADDRESS
+GET http://localhost:8080/api/contacts/56991597-d37f-43f3-a333-349789ffc4e8/addresses HTTP/1.1
+Accept: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0
+
+### UPDATE ADDRESS
+PUT http://localhost:8080/api/contacts/56991597-d37f-43f3-a333-349789ffc4e8/addresses/0bdb4d7b-ce90-4151-9824-cbc011dbd4fd  HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0
+
+{
+    "street": "Jalan Baru di Buat",
+    "city": "Serang",
+    "province": "Banten",
+    "country": "Indonesia",
+    "postalCode": "12412"
+
+}
+
+### REMOVE ADDRESS
+DELETE http://localhost:8080/api/contacts/56991597-d37f-43f3-a333-349789ffc4e8/addresses/0bdb4d7b-ce90-4151-9824-cbc011dbd4fd  HTTP/1.1
+Accept: application/json
+X-API-TOKEN: 5c9c192b-bfc8-4c9e-bddf-b5acfadd2ff0

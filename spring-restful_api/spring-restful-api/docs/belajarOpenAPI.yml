@@ -1,0 +1,158 @@
+openapi: "3.0.2"
+info:
+  title: TODOLIST REST API
+  version: "1.0"
+  contact:
+    name: Eki Nurhasim Al Asari
+    email: ekiasari24@gmail.com
+    url: https://ekiasari.com
+  description: Simple API for TodoList App
+  termsOfService: https://orange.com
+  license:
+    name: Apache 2.0
+    url: https://apache.org/licenses/LICENSE-2.0
+externalDocs:
+  url: https://github.com/EkiNurhasim
+  description: external documentation for todolist api
+servers:
+  - url: https://localhost:{port}/{env}/api
+    description: Current Server
+    variables:
+      env:
+        default: dev
+        description: this value represent current env
+        enum:
+          - "dev"
+          - "prod"
+      port:
+        default: "5432"
+        description: this is the port of current server
+        enum:
+          - "5432"
+          - "8080"
+paths:
+  /todolist:
+    get:
+      summary: Get all todolist
+      description: Get all todolist from database
+      parameters:
+        - name: include_done
+          in: query
+          required: false
+          description: "Is include done todolist"
+          schema:
+            type: boolean
+            nullable: true
+            default: false
+        - name: name
+          in: query
+          required: false
+          description: Filter todolist byName
+          schema:
+            type: string
+            nullable: true
+            minLength: 1
+            maxLength: 100
+          examples:
+            "java":
+              value: java
+            "php":
+              value: php
+      responses:
+        200:
+          description: OK
+    post:
+      summary: Create new todolist
+      description: Create new todolist to database
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            schema:
+              type: object
+              properties:
+                "name":
+                  type: string
+                  minLength: 1
+                "priority":
+                  type: integer
+                  format: int32
+                  default: 1
+            examples:
+              "orange":
+                description: "Example create todolist orange"
+                value:
+                  "name": orange
+                  "priority": 4
+              "white":
+                description: "Example create todolist white"
+                value:
+                  "name": white
+                  "priority": 2
+      responses:
+        "200":
+          description: OK
+  /todolist/{id}:
+    put:
+      summary: Update todolist ById
+      description: Update todolist byId from database
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            schema:
+              type: object
+              properties:
+                "name":
+                  type: string
+                  minLength: 1
+                "priority":
+                  type: integer
+                  format: int32
+                  default: 1
+            examples:
+              example 1:
+                description: "Example update todolist orange"
+                value:
+                  "name": orange
+                  "priority": 6
+              example 2:
+                description: "Example update todolist white"
+                value:
+                  "name": white
+                  "priority": 3
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: id of todolist to update the content
+          schema:
+            type: string
+            minLength: 1
+            maxLength: 100
+          examples:
+            "example 1":
+              description: example 1 update data
+              value: 1
+            "example 2":
+              description: example 2 update data
+              value: 2
+
+      responses:
+        "200":
+          description: OK
+    delete:
+      summary: Delete todolist ById
+      description: Delete todolist byId from database
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: id of todolist to delete
+          schema:
+            type: string
+            minLength: 1
+            maxLength: 100
+      responses:
+        "200":
+          description: OK

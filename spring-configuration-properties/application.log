@@ -1,0 +1,18 @@
+2024-04-11T06:29:29.702+07:00  INFO 12016 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : Starting PropertiesTest using Java 17.0.6 with PID 12016 (started by EkiAsari in C:\Users\EkiAsari\Desktop\spring-configuration-properties)
+2024-04-11T06:29:29.713+07:00  INFO 12016 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : No active profile set, falling back to 1 default profile: "default"
+2024-04-11T06:29:32.947+07:00  INFO 12016 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : Started PropertiesTest in 4.967 seconds (process running for 9.467)
+2024-04-11T06:29:37.614+07:00  INFO 12016 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : dev profile
+2024-04-11T06:29:37.615+07:00  INFO 12016 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : dev profile
+2024-04-11T06:29:37.617+07:00  INFO 12016 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : C:\Program Files\Java\jdk-17
+2024-04-11T06:30:32.335+07:00  INFO 10812 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : Starting PropertiesTest using Java 17.0.6 with PID 10812 (started by EkiAsari in C:\Users\EkiAsari\Desktop\spring-configuration-properties)
+2024-04-11T06:30:32.341+07:00  INFO 10812 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : No active profile set, falling back to 1 default profile: "default"
+2024-04-11T06:30:35.990+07:00  INFO 10812 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : Started PropertiesTest in 6.189 seconds (process running for 11.462)
+2024-04-11T06:30:39.444+07:00  INFO 10812 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : dev profile
+2024-04-11T06:30:39.444+07:00  INFO 10812 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : dev profile
+2024-04-11T06:30:39.444+07:00  INFO 10812 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : C:\Program Files\Java\jdk-17
+2024-04-11T06:31:43.319+07:00  INFO 11600 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : Starting PropertiesTest using Java 17.0.6 with PID 11600 (started by EkiAsari in C:\Users\EkiAsari\Desktop\spring-configuration-properties)
+2024-04-11T06:31:43.330+07:00  INFO 11600 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : No active profile set, falling back to 1 default profile: "default"
+2024-04-11T06:31:46.936+07:00  INFO 11600 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : Started PropertiesTest in 6.486 seconds (process running for 15.699)
+2024-04-11T06:31:51.306+07:00  INFO 11600 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : dev profile
+2024-04-11T06:31:51.312+07:00  INFO 11600 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : dev profile
+2024-04-11T06:31:51.323+07:00  INFO 11600 --- [dev profile] [main] c.ekiasari.spring.config.PropertiesTest  : C:\Program Files\Java\jdk-17

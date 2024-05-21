@@ -1,0 +1,1 @@
+CREATE DATABASE spring_resful_api;
